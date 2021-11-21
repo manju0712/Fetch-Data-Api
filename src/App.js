@@ -6,7 +6,7 @@ const USERS_URL = "https://jsonplaceholder.typicode.com/users";
 
 function App() {
   const [users, setUsers] = useState([]);
-  const [user, setUser] = useState(); // if user != null, it's a certain user showing mode
+  const [user, setUser] = useState(); 
 
   // Fetch user data
   useEffect(() => {
@@ -17,7 +17,7 @@ function App() {
       setUsers(response);
     };
     fetchData();
-  }, []); // debendency variables
+  }, []); 
 
   const handleClick = (user, showDetails) => {
     if (showDetails) {

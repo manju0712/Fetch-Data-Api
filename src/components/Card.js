@@ -4,7 +4,6 @@ import Avatar from 'react-avatar';
 const Card = ({ user, handleClick }) => {
   return (
     <div>
-     
         <div>
             <Avatar name={user.name} maxInitials={1} size="75" round={true} textSizeRatio={2}/>
          </div>

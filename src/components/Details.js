@@ -10,11 +10,12 @@ function refreshPage() {
   window.location.reload(false);
 }
 
+
 const Details = ({ user, handleClick }) => {
   if (user) {
     return (
       <div>
-        <div className="container-details">
+        <div className="container-details" key={user.id}>
           <ul>
             <li> name: {user.name}</li>
             <li>username: {user.username}</li>
