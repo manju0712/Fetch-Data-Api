@@ -1,22 +1,19 @@
-import React  from "react"
-
+import React  from "react";
+import Avatar from 'react-avatar';
 
 const Card = ({ user, handleClick }) => {
   return (
     <div>
-      <img
-        alt=""
-        src="/usericon.png"
-        width="30"
-        height="30"
-      />
+     
+        <div>
+            <Avatar name={user.name} maxInitials={1} size="75" round={true} textSizeRatio={2}/>
+         </div>
 
-      <h4>{user.name}</h4>
-      <h4>@{user.username}</h4>
-      <p>
-        <a href={"http://" + user.website}>http://{user.website}</a>
-      </p>
-
+         <h5>{user.name}</h5>
+         <h6><i> @{user.username}</i></h6>
+         <p>
+         <a href={"http://" + user.website}>http://{user.website}</a>
+         </p>
       <div>
         <button type='submit' onClick={() => handleClick(user, true)}>
           More Details
